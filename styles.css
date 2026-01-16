@@ -694,8 +694,15 @@ button:active {
   padding-left: var(--spacing-sm);
   z-index: 1;
   font-weight: 500;
-  color: var(--clr-text);
+  color: var(--clr-bg);
   font-size: 0.9375rem;
+  position: relative;
+  mix-blend-mode: difference;
+}
+
+[data-theme="dark"] .bar span {
+  color: var(--clr-text);
+  mix-blend-mode: normal;
 }
 
 .bar::before {
