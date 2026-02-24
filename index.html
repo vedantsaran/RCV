@@ -10,10 +10,81 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+        <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="M4.93 4.93l1.41 1.41"></path>
+            <path d="M17.66 17.66l1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="M4.93 19.07l1.41-1.41"></path>
+            <path d="M17.66 6.34l1.41-1.41"></path>
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 13.2A8.5 8.5 0 0 1 10.8 3a7 7 0 1 0 10.2 10.2Z"></path>
+        </symbol>
+        <symbol id="icon-ballot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3h8"></path>
+            <path d="M12 3v7"></path>
+            <path d="M7 10h10"></path>
+            <path d="M6 10v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-9"></path>
+            <path d="M9 15l2 2 4-4"></path>
+        </symbol>
+        <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21a8 8 0 0 0-16 0"></path>
+            <circle cx="12" cy="8" r="4"></circle>
+        </symbol>
+        <symbol id="icon-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.3 4.3a2 2 0 0 1 3.4 0l8 13.9A2 2 0 0 1 20 21H4a2 2 0 0 1-1.7-2.9l8-13.8Z"></path>
+            <path d="M12 9v4"></path>
+            <path d="M12 17h.01"></path>
+        </symbol>
+        <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19V5"></path>
+            <path d="M4 19h16"></path>
+            <path d="M8 17v-6"></path>
+            <path d="M12 17v-9"></path>
+            <path d="M16 17v-4"></path>
+        </symbol>
+        <symbol id="icon-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18h6"></path>
+            <path d="M10 22h4"></path>
+            <path d="M8 14a6 6 0 1 1 8 0c-1 1-1.5 2-1.5 3H9.5c0-1-.5-2-1.5-3Z"></path>
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.3-4.3"></path>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"></path>
+        </symbol>
+        <symbol id="icon-game" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 12h4"></path>
+            <path d="M9 10v4"></path>
+            <path d="M15.5 11.5h.01"></path>
+            <path d="M18.5 13.5h.01"></path>
+            <path d="M6 7h12a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-2a4 4 0 0 1 4-4Z"></path>
+        </symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18"></path>
+            <path d="M12 3a12 12 0 0 1 0 18"></path>
+            <path d="M12 3a12 12 0 0 0 0 18"></path>
+        </symbol>
+    </svg>
     <header class="hero">
         <div class="hero-content">
-            <button id="theme" aria-label="Toggle dark mode">🌓</button>
-            <div class="hero-icon">🗳️</div>
+            <button id="theme" aria-label="Toggle dark mode">
+                <span class="theme-icon" aria-hidden="true">
+                    <svg class="icon icon-moon"><use href="#icon-moon"></use></svg>
+                    <svg class="icon icon-sun"><use href="#icon-sun"></use></svg>
+                </span>
+            </button>
+            <div class="hero-icon" aria-hidden="true">
+                <svg class="icon"><use href="#icon-ballot"></use></svg>
+            </div>
             <h1>Sophia's Voting Story</h1>
             <div class="hero-divider"></div>
             <p>Follow one voter's journey to discover why we need Ranked Choice Voting</p>
@@ -26,7 +97,7 @@
     <section id="story" class="story-section">
         <div class="container">
             <div class="story-card reveal">
-                <div class="character">👩‍💼</div>
+                <div class="character" aria-hidden="true"><svg class="icon"><use href="#icon-user"></use></svg></div>
                 <h2>Meet Sophia</h2>
                 <p class="story-text">Sophia's first mayoral race has two progressives she likes—<strong>Maria Chen</strong> (her <em>favorite</em>) and <strong>Alex Johnson</strong> (a close second)—plus establishment candidate <strong>Robert Smith</strong>.</p>
             </div>
@@ -36,7 +107,7 @@
     <section class="story-section problem">
         <div class="container">
             <div class="story-card reveal">
-                <div class="character">😟</div>
+                <div class="character" aria-hidden="true"><svg class="icon"><use href="#icon-alert"></use></svg></div>
                 <h2>The Dilemma</h2>
                 <p class="story-text">Friends warn: "A vote for Maria helps Robert! Choose Alex instead."</p>
                 <div class="dilemma-table">
@@ -74,7 +145,7 @@
     <section class="story-section">
         <div class="container">
             <div class="story-card reveal">
-                <div class="character">📊</div>
+                <div class="character" aria-hidden="true"><svg class="icon"><use href="#icon-chart"></use></svg></div>
                 <h2>What Actually Happens</h2>
                 <p class="story-text">Sophia decides to vote for Maria, her true favorite. But here's what happens in the election:</p>
                 
@@ -103,7 +174,7 @@
                 </div>
                 
                 <div class="outcome">
-                    <h3>🏆 Robert Smith wins with 45%</h3>
+                    <h3>Robert Smith wins with 45%</h3>
                     <p>A majority (55%) preferred a progressive, but the split lets him slip in.</p>
                 </div>
             </div>
@@ -113,7 +184,7 @@
     <section class="story-section discovery">
         <div class="container">
             <div class="story-card reveal">
-                <div class="character">💡</div>
+                <div class="character" aria-hidden="true"><svg class="icon"><use href="#icon-bulb"></use></svg></div>
                 <h2>Sophia Discovers RCV</h2>
                 <p class="story-text">Sophia learns about Ranked Choice Voting. Instead of choosing just one candidate, she can rank them in order of preference!</p>
                 
@@ -141,7 +212,7 @@
     <section class="story-section">
         <div class="container">
             <div class="story-card reveal">
-                <div class="character">🔍</div>
+                <div class="character" aria-hidden="true"><svg class="icon"><use href="#icon-search"></use></svg></div>
                 <h2>How RCV Counts Votes</h2>
                 <p class="story-text">Here's what happens when the same votes are counted using RCV:</p>
                 
@@ -177,7 +248,7 @@
                                 <div class="vote-bar robert" style="width: 45%"></div>
                             </div>
                         </div>
-                        <p><strong>🏆 Alex wins with 55%!</strong></p>
+                        <p><strong>Alex wins with 55%!</strong></p>
                     </div>
                 </div>
             </div>
@@ -187,24 +258,24 @@
     <section class="story-section">
         <div class="container">
             <div class="story-card reveal">
-                <div class="character">🎉</div>
+                <div class="character" aria-hidden="true"><svg class="icon"><use href="#icon-check"></use></svg></div>
                 <h2>Sophia's Happy Ending</h2>
                 <p class="story-text">With RCV, Sophia can:</p>
                 <div class="benefits-list">
                     <div class="benefit-item">
-                        <span class="benefit-icon">✅</span>
+                        <span class="benefit-icon" aria-hidden="true"><svg class="icon"><use href="#icon-check"></use></svg></span>
                         <span>Vote your <strong>true favorite</strong> without fear.</span>
                     </div>
                     <div class="benefit-item">
-                        <span class="benefit-icon">✅</span>
+                        <span class="benefit-icon" aria-hidden="true"><svg class="icon"><use href="#icon-check"></use></svg></span>
                         <span>Your <strong>next choice counts</strong> if the first is out.</span>
                     </div>
                     <div class="benefit-item">
-                        <span class="benefit-icon">✅</span>
+                        <span class="benefit-icon" aria-hidden="true"><svg class="icon"><use href="#icon-check"></use></svg></span>
                         <span>The winner must cross 50%—no minority victories.</span>
                     </div>
                     <div class="benefit-item">
-                        <span class="benefit-icon">✅</span>
+                        <span class="benefit-icon" aria-hidden="true"><svg class="icon"><use href="#icon-check"></use></svg></span>
                         <span>The "spoiler effect" disappears.</span>
                     </div>
                 </div>
@@ -215,7 +286,7 @@
     <section class="interactive-section">
         <div class="container">
             <div class="story-card reveal">
-                <div class="character">🎮</div>
+                <div class="character" aria-hidden="true"><svg class="icon"><use href="#icon-game"></use></svg></div>
                 <h2>Try It Yourself</h2>
                 <p class="story-text">Create your own election scenario and see how RCV works!</p>
                 
@@ -239,7 +310,7 @@
     <section class="story-section">
         <div class="container">
             <div class="story-card reveal">
-                <div class="character">🌍</div>
+                <div class="character" aria-hidden="true"><svg class="icon"><use href="#icon-globe"></use></svg></div>
                 <h2>Real Stories Like Sophia's</h2>
                 <p class="story-text">Sophia's story isn't unique. Here are real places where RCV has made voting better:</p>
                 

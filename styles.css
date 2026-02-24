@@ -131,12 +131,30 @@ p {
   max-width: 700px;
 }
 
-.hero-icon {
-  font-size: 4rem;
-  margin-bottom: var(--spacing-md);
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
   display: block;
-  opacity: 0.8;
+}
+
+.hero-icon {
+  width: 84px;
+  height: 84px;
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  border: 1px solid var(--clr-border);
+  background: var(--clr-bg-secondary);
+  color: var(--clr-text);
+  opacity: 0.95;
   animation: fadeInDown 0.6s ease-out;
+}
+
+.hero-icon .icon {
+  width: 40px;
+  height: 40px;
 }
 
 @keyframes fadeInDown {
@@ -216,7 +234,6 @@ p {
   padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.25rem;
   transition: var(--transition);
   z-index: 1000;
   width: 48px;
@@ -224,6 +241,28 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.theme-icon {
+  display: grid;
+  place-items: center;
+}
+
+.theme-icon .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-icon .icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-icon .icon-moon {
+  display: none;
 }
 
 #theme:hover {
@@ -325,10 +364,20 @@ button:active {
 }
 
 .character {
-  font-size: 3.5rem;
-  margin-bottom: var(--spacing-md);
-  display: block;
-  text-align: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid var(--clr-border);
+  background: var(--clr-bg-secondary);
+  color: var(--clr-text);
+  display: grid;
+  place-items: center;
+  margin: 0 auto var(--spacing-md);
+}
+
+.character .icon {
+  width: 22px;
+  height: 22px;
 }
 
 .story-text {
@@ -559,8 +608,13 @@ button:active {
 }
 
 .benefit-icon {
-  font-size: 1.25rem;
   flex-shrink: 0;
+  color: var(--clr-text);
+}
+
+.benefit-icon .icon {
+  width: 18px;
+  height: 18px;
 }
 
 /* Interactive Section - Clean */
